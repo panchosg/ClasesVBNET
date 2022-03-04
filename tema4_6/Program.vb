@@ -22,6 +22,7 @@ Module Program
         lexmark = New Lexmark()
 
         'listaImpresoras = New List(Of Impresora)
+        'otro comentario
 
         For contador = 0 To 2
             Select Case contador
