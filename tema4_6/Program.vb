@@ -38,8 +38,7 @@ Module Program
                 Case Else
                     impresoraGenerica = New HP()
             End Select
-            impresoraGenerica.Imprimir()
-            Console.WriteLine("El promedo de calidad de la impresora" & nombreImpresoras & " es: " & impresoraGenerica.CalculaCalidad())
+            EjecutarProcesoImpresora(impresoraGenerica, nombreImpresoras)
         Next
 
         ''Crear las hojas de prueba con su calidad
@@ -63,5 +62,10 @@ Module Program
 
         'Console.WriteLine("El promedo de calidad de Lexmark es: " & promCalidadLexmark)
 
+    End Sub
+
+    Public Sub EjecutarProcesoImpresora(impresoraGenerica As Impresora, nombreImpresoras As String)
+        impresoraGenerica.Imprimir()
+        Console.WriteLine("El promedo de calidad de la impresora" & nombreImpresoras & " es: " & impresoraGenerica.CalculaCalidad())
     End Sub
 End Module
