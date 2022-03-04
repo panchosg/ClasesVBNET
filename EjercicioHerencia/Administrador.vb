@@ -1,16 +1,12 @@
-﻿Option Explicit On
-Option Strict On
-
-Public Class Becario : Inherits Empleado
-
+﻿Public Class Administrador : Inherits Empleado
     ''' <summary>
-    ''' Calcula salario mes del becario
+    ''' Calcula salario mes del Administrador
     ''' </summary>
     Public Overrides Sub CalculaSalarioMes()
-        pvSalarioMes = SalarioHora * HorasTrabajadas.TotalHours
+        pvSalarioMes = SalarioHora * (HorasTrabajadas.TotalHours + 1)
     End Sub
     ''' <summary>
-    ''' COnstructor de la clase hija Becario
+    ''' Constructor de la clase hija Becario
     ''' </summary>
     ''' <param name="nombre"></param>
     ''' <param name="dni"></param>
