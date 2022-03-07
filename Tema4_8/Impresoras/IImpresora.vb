@@ -13,7 +13,7 @@ Public Interface IImpresora
     ''' </summary>
     ''' <param name="textoImprimir">texto que se va a imprimir</param>
     ''' <returns>True si fue correcta la impresión</returns>
-    Function Imprimir(textoImprimir As String) As Boolean
+    Function Imprimir(textoImprimir As String) As String
     ''' <summary>
     ''' Cancelar impresión
     ''' </summary>

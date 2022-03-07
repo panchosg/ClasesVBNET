@@ -1,6 +1,9 @@
-﻿Public Class HP1250 : Implements IImpresora
+﻿Option Explicit On
+Option Strict On
 
-    Private pvEncederLedsRojos
+Public Class HP1250 : Implements IImpresora
+
+    Private pvEncederLedsRojos As Boolean
 
     Public Property EstaConectada As Boolean Implements IImpresora.EstaConectada
         Get
@@ -37,7 +40,7 @@
         End Set
     End Property
 
-    Public Function ImprimirHP1250(textoImprimir As String) As Boolean Implements IImpresora.Imprimir
+    Public Function ImprimirHP1250(textoImprimir As String) As String Implements IImpresora.Imprimir
         Return NativePrinterHPCorp(textoImprimir)
     End Function
 
@@ -56,7 +59,7 @@
         'Codigo nativo de la HP
         'var = &HHH093
         '.....
-        Return "finish"
+        Return "Print With HP1250"
     End Function
 
     Private Function TurnOnGreenLeds(turnOn As Boolean) As Boolean
