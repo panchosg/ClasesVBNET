@@ -1,9 +1,4 @@
-﻿Option Explicit On
-Option Strict On
-
-Public Class HP1250 : Implements IImpresora
-
-    Private pvEncederLedsRojos As Boolean
+﻿Public Class CitizenGSX190S : Implements IImpresora
 
     Public Property EstaConectada As Boolean Implements IImpresora.EstaConectada
         Get
@@ -13,7 +8,8 @@ Public Class HP1250 : Implements IImpresora
 
         End Set
     End Property
-    Public Property ErroImpresora As Boolean Implements IImpresora.ErrorImpresora
+
+    Public Property ErrorImpresora As Boolean Implements IImpresora.ErrorImpresora
         Get
 
         End Get
@@ -24,10 +20,10 @@ Public Class HP1250 : Implements IImpresora
 
     Public Property EncederLedsRojos As Boolean Implements IImpresora.EncederLedsRojos
         Get
-            Return pvEncederLedsRojos
+
         End Get
         Set(value As Boolean)
-            pvEncederLedsRojos = TurnOnRedsLeds(value)
+
         End Set
     End Property
 
@@ -40,26 +36,21 @@ Public Class HP1250 : Implements IImpresora
         End Set
     End Property
 
-    Public Function ImprimirHP1250(textoImprimir As String) As String Implements IImpresora.Imprimir
-        Return NativePrinterHPCorp(textoImprimir)
+    Public Function Imprimir(textoImprimir As String) As String Implements IImpresora.Imprimir
+        Return NativePrinterCITIZENCorp(textoImprimir)
     End Function
 
     Public Function Cancelar() As Boolean Implements IImpresora.Cancelar
-        Return CancelJob(True)
+
     End Function
 
 
-
-
-
-
-
-#Region "----- Funciones Nativas HP ------"
-    Private Function NativePrinterHPCorp(textToPrinter As String) As String
-        'Codigo nativo de la HP
+#Region "----- Funciones Nativas CITIZEN ------"
+    Private Function NativePrinterCITIZENCorp(textToPrinter As String) As String
+        'Codigo nativo de la CITIZEN
         'var = &HHH093
         '.....
-        Return textToPrinter & vbCrLf & " Printed With HP1250"
+        Return textToPrinter & vbCrLf & " Printed With CITIZEN 190 GSX"
     End Function
 
     Private Function TurnOnGreenLeds(turnOn As Boolean) As Boolean
@@ -74,5 +65,6 @@ Public Class HP1250 : Implements IImpresora
         Return isCancel
     End Function
 #End Region
+
 
 End Class
