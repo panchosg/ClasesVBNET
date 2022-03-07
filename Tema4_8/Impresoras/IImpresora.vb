@@ -1,4 +1,7 @@
-﻿Public Interface IImpresora
+﻿''' <summary>
+''' Sirve de contrato o guía para las demás implementaciones
+''' </summary>
+Public Interface IImpresora
 
     Property EstaConectada As Boolean
     Property ErrorImpresora As Boolean

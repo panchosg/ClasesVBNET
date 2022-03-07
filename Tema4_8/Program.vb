@@ -6,6 +6,11 @@ Module Program
 
         'Imprimir un hola mundo en diferentes tipos de dispositivo de impresión
 
+        'procedimiento de impresión
+
+
+
+
 
     End Sub
 End Module
