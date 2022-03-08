@@ -18,5 +18,4 @@ Public Class AnalizadorDeAdopciones(Of T As IAnimales)
         End If
     End Function
 
-
 End Class
