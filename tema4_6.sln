@@ -15,6 +15,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "tema4_9", "tema4_9\tema4_9.
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MIPrimerWinForm", "MIPrimerWinForm\MIPrimerWinForm.vbproj", "{F6264CD8-5E02-4EF2-A320-47FBFC47D675}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "tema5_2", "tema5_2\tema5_2.vbproj", "{D9ACCEAB-D217-4E43-BE3E-AF24E17C2706}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "tema5_2_1", "tema5_2_1\tema5_2_1.vbproj", "{DCF28044-D80E-4811-89C2-BE8A9C254770}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{F6264CD8-5E02-4EF2-A320-47FBFC47D675}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6264CD8-5E02-4EF2-A320-47FBFC47D675}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6264CD8-5E02-4EF2-A320-47FBFC47D675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9ACCEAB-D217-4E43-BE3E-AF24E17C2706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9ACCEAB-D217-4E43-BE3E-AF24E17C2706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9ACCEAB-D217-4E43-BE3E-AF24E17C2706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9ACCEAB-D217-4E43-BE3E-AF24E17C2706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF28044-D80E-4811-89C2-BE8A9C254770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF28044-D80E-4811-89C2-BE8A9C254770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF28044-D80E-4811-89C2-BE8A9C254770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF28044-D80E-4811-89C2-BE8A9C254770}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
