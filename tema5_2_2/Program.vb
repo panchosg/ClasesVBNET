@@ -24,8 +24,13 @@ Module Program
     End Sub
 
     '1.2 Declara función enlazada a evento
-    Public Sub ReceptorEmpleado_LimiteSueldo(sueldo As Double)
-        Console.WriteLine("la persona " & receptorEmpleado.Nombre & " ha recibido más de los estipulado: " & sueldo)
+    'Public Sub ReceptorEmpleado_LimiteSueldo(sueldo As Double)
+    '    Console.WriteLine("la persona ha recibido más de los estipulado: " & sueldo)
+    '    Console.WriteLine("El importe no es válido")
+    'End Sub
+
+    Public Sub ReceptorEmpleado_LimiteSueldo(empleado As Empleado, emplArgs As EmpleArgs)
+        Console.WriteLine("la persona" & empleado.Nombre & " ha recibido más de los estipulado: " & emplArgs.SueldoIntentadoAsig)
         Console.WriteLine("El importe no es válido")
     End Sub
 

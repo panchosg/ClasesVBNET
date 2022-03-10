@@ -1,7 +1,7 @@
 ﻿Option Explicit On
 Option Strict On
 Public Class Empleado
-    Public Event EventoLimiteSueldo(sueldo As Double) 'Emisor
+    Public Event EventoLimiteSueldo(sender As Empleado, e As EmpleArgs) 'Emisor
     Private pvSueldo As Double
     Public Property Nombre As String
     Public Property Sueldo As Double
@@ -10,7 +10,10 @@ Public Class Empleado
         End Get
         Set(value As Double)
             If value > 1000 Then
-                RaiseEvent EventoLimiteSueldo(value)
+                Dim empleArgs As EmpleArgs
+                empleArgs = New EmpleArgs()
+                empleArgs.SueldoIntentadoAsig = value
+                RaiseEvent EventoLimiteSueldo(Me, empleArgs)
             Else
                 pvSueldo = value
             End If
