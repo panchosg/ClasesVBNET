@@ -32,6 +32,7 @@ Module Program
     Public Sub ReceptorEmpleado_LimiteSueldo(empleado As Empleado, emplArgs As EmpleArgs)
         Console.WriteLine("la persona" & empleado.Nombre & " ha recibido más de los estipulado: " & emplArgs.SueldoIntentadoAsig)
         Console.WriteLine("El importe no es válido")
+        Console.WriteLine(emplArgs.MensajeRRHH)
     End Sub
 
 

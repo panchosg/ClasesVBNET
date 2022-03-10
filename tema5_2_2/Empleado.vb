@@ -13,6 +13,7 @@ Public Class Empleado
                 Dim empleArgs As EmpleArgs
                 empleArgs = New EmpleArgs()
                 empleArgs.SueldoIntentadoAsig = value
+                empleArgs.MensajeRRHH = "La jefa de personal debe ser despedida"
                 RaiseEvent EventoLimiteSueldo(Me, empleArgs)
             Else
                 pvSueldo = value
