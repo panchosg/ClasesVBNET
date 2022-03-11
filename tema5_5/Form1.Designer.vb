@@ -23,16 +23,29 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnEmegencia = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(255, 174)
+        Me.Button1.Location = New System.Drawing.Point(253, 300)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(272, 60)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnEmegencia
+        '
+        Me.btnEmegencia.BackColor = System.Drawing.Color.Firebrick
+        Me.btnEmegencia.Font = New System.Drawing.Font("Arial Black", 16.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.btnEmegencia.ForeColor = System.Drawing.Color.White
+        Me.btnEmegencia.Location = New System.Drawing.Point(253, 106)
+        Me.btnEmegencia.Name = "btnEmegencia"
+        Me.btnEmegencia.Size = New System.Drawing.Size(272, 59)
+        Me.btnEmegencia.TabIndex = 1
+        Me.btnEmegencia.Text = "S O S !!!"
+        Me.btnEmegencia.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -40,6 +53,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnEmegencia)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -48,4 +62,5 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnEmegencia As Button
 End Class
