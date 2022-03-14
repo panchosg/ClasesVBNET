@@ -23,7 +23,9 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnEmegencia = New System.Windows.Forms.Button()
+        Me.btnEmergencia = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -31,21 +33,38 @@ Partial Class Form1
         Me.Button1.Location = New System.Drawing.Point(253, 300)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(272, 60)
-        Me.Button1.TabIndex = 0
+        Me.Button1.TabIndex = 2
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'btnEmegencia
+        'btnEmergencia
         '
-        Me.btnEmegencia.BackColor = System.Drawing.Color.Firebrick
-        Me.btnEmegencia.Font = New System.Drawing.Font("Arial Black", 16.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
-        Me.btnEmegencia.ForeColor = System.Drawing.Color.White
-        Me.btnEmegencia.Location = New System.Drawing.Point(253, 106)
-        Me.btnEmegencia.Name = "btnEmegencia"
-        Me.btnEmegencia.Size = New System.Drawing.Size(272, 59)
-        Me.btnEmegencia.TabIndex = 1
-        Me.btnEmegencia.Text = "S O S !!!"
-        Me.btnEmegencia.UseVisualStyleBackColor = False
+        Me.btnEmergencia.BackColor = System.Drawing.Color.Firebrick
+        Me.btnEmergencia.Font = New System.Drawing.Font("Arial Black", 16.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.btnEmergencia.ForeColor = System.Drawing.Color.White
+        Me.btnEmergencia.Location = New System.Drawing.Point(253, 106)
+        Me.btnEmergencia.Name = "btnEmergencia"
+        Me.btnEmergencia.Size = New System.Drawing.Size(272, 59)
+        Me.btnEmergencia.TabIndex = 1
+        Me.btnEmergencia.Text = "S O S !!!"
+        Me.btnEmergencia.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(286, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(94, 15)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Indique Nombre"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(386, 33)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
+        Me.TextBox1.TabIndex = 3
         '
         'Form1
         '
@@ -53,14 +72,19 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btnEmegencia)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnEmergencia)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents btnEmegencia As Button
+    Friend WithEvents btnEmergencia As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class
