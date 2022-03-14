@@ -35,8 +35,8 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -160,31 +160,31 @@ Partial Class Form1
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "FORMULARIO DE REPARACIÓN"
         '
-        'Button1
+        'btnAceptar
         '
-        Me.Button1.Location = New System.Drawing.Point(103, 299)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAceptar.Location = New System.Drawing.Point(119, 299)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAceptar.TabIndex = 10
+        Me.btnAceptar.Text = "Aceptar"
+        Me.btnAceptar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnSalir
         '
-        Me.Button2.Location = New System.Drawing.Point(234, 299)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Salir"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnSalir.Location = New System.Drawing.Point(252, 299)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.TabIndex = 11
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(430, 395)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.Label4)
@@ -217,6 +217,6 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnAceptar As Button
+    Friend WithEvents btnSalir As Button
 End Class
