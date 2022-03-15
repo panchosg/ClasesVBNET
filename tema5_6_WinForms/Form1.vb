@@ -7,7 +7,10 @@
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         Dim datos As DatosFormulariosModelView
+        Dim baseDatos As BaseDatos
+
         datos = New DatosFormulariosModelView
+        baseDatos = New BaseDatos
 
         datos.NombreUsuario = txtUsuario.Text
         datos.Matricula = txtMatricula.Text
@@ -32,7 +35,13 @@
         'MessageBox.Show("NombreUsuario:" & datos.NombreUsuario & " Matricula:" & datos.Matricula & " Pieza:" & datos.Pieza &
         '                " Cantidad:" & datos.Cantidad & " Vehículo:" & datos.Vehiculo)
 
-
+        If datos.DatosCorrectos = True Then
+            baseDatos.EscribirBaseDatosForm1(datos)
+            MessageBox.Show("Base de datos escrita correctamente", "Operación Completada", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            LimpiarCampos()
+        Else
+            MessageBox.Show("Existen campos vacios, por favor intentelo nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -67,5 +76,15 @@
         Else
             cmbPieza.Items.Clear()
         End If
+    End Sub
+
+    Private Sub LimpiarCampos()
+        txtCantidad.Clear()
+        txtMatricula.Clear()
+        txtUsuario.Clear()
+        cmbPieza.Items.Clear()
+        rdbCamion.Checked = False
+        rdbCoche.Checked = False
+        rdbMoto.Checked = False
     End Sub
 End Class
