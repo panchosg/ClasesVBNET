@@ -119,6 +119,7 @@ Partial Class Form1
         '
         'cmbPieza
         '
+        Me.cmbPieza.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbPieza.FormattingEnabled = True
         Me.cmbPieza.Location = New System.Drawing.Point(134, 228)
         Me.cmbPieza.Name = "cmbPieza"
