@@ -6,6 +6,14 @@
     Private Sub AdicionarJugadoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdicionarJugadoresToolStripMenuItem.Click
         Dim formAdicionarJ As FrmAdicionarJ
         formAdicionarJ = New FrmAdicionarJ()
+        formAdicionarJ.MdiParent = Me
         formAdicionarJ.Show() 'Indica que se muestre el formulario
+    End Sub
+
+    Private Sub MostrarSueldosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MostrarSueldosToolStripMenuItem.Click
+        Dim formMostrarSueldos As FrmMostrarSueldos
+        formMostrarSueldos = New FrmMostrarSueldos
+        formMostrarSueldos.MdiParent = Me
+        formMostrarSueldos.Show()
     End Sub
 End Class
