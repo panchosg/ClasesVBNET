@@ -16,4 +16,18 @@
         formMostrarSueldos.MdiParent = Me
         formMostrarSueldos.Show()
     End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Dim quiereSalir As DialogResult
+        quiereSalir = MessageBox.Show("¿Realmente desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        If quiereSalir = DialogResult.Yes Then
+            Close()
+        End If
+
+    End Sub
+
+    Private Sub SalirToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem1.Click
+        SalirToolStripMenuItem_Click(sender, e)
+    End Sub
+
 End Class
