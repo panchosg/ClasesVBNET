@@ -31,5 +31,15 @@ VALUES ("Producto4",'aceitePie','loción para las axilas',1234,3);*/
 -- SELECT Min(LifeExpectancy) AS EsperanzaVidaMin, GovernmentForm, Region, Name FROM country WHERE GovernmentForm LIKE '%Socialistic%' group by GovernmentForm order by EsperanzaVidaMin  limit 1000; 
 -- SELECT COUNT(Name) AS CantidadPaises, Region FROM Country GROUP BY Region ORDER BY CantidadPaises desc LIMIT 1000;
 
+USE pruebavb;
+-- SELECT * FROM pruebavb.productos;
+-- DELETE FROM productos WHERE codigo_producto = 6;
+-- DELETE FROM productos WHERE tipo = 'aceitePie';
+-- DELETE FROM productos WHERE codigo_producto IN (2,4);
+-- DROP TABLE productos; PROHIBIDO, VACIA TODA LA TABLA DE LA BASE DE DATOS!!
+-- DELETE FROM productos WHERE codigo_producto NOT IN (2,4);
+-- DELETE FROM productos; PROHBIDO!!, BORRA TODOS LOS REGISTROS!!!!
+-- UPDATE productos SET tipo='', precio=4321 WHERE codigo_producto = 4;
+-- UPDATE productos SET tipo='', precio=4321;
 
 
