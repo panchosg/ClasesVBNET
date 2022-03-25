@@ -11,4 +11,25 @@ SELECT * FROM country WHERE IndepYear between 1950 and 1960 order by Name; */
 -- SELECT * FROM country WHERE NOT GovernmentForm = "Republic" AND NOT GovernmentForm = "Federal Republic";
 -- SELECT * FROM country WHERE GovernmentForm like "%Socialist%";
 
+-- USE pruebavb;
+/*INSERT INTO productos (codigo_producto, nombre_producto, tipo, descripcion, precio, fabrica)
+VALUES (0,"Producto2",'aceitePie','loción para las axilas',1234,3);*/
+/*INSERT INTO productos (nombre_producto, tipo, descripcion, precio, fabrica)
+VALUES ("Producto4",'aceitePie','loción para las axilas',1234,3);*/
+-- INSERT INTO productos VALUES (0,"Producto5",'aceitePie3','loción para lOS PIES',12,5);
+
+-- USE world;
+-- SELECT * FROM world.city;
+-- SELECT COUNT(Name) AS CantidadCiudades, CountryCode FROM city group by CountryCode order by CantidadCiudades desc LIMIT 1000;
+
+
+-- USE world;
+-- SELECT * FROM Country LIMIT 1000;
+-- SELECT AVG(LifeExpectancy), Region FROM country group by Region limit 1000; 
+-- SELECT AVG(LifeExpectancy) AS EsperanzaVidaPromedio, GovernmentForm, Region FROM country group by GovernmentForm order by EsperanzaVidaPromedio  limit 1000; 
+-- SELECT Max(LifeExpectancy) AS EsperanzaVidaMax, GovernmentForm, Region FROM country group by GovernmentForm order by EsperanzaVidaMax  limit 1000; 
+-- SELECT Min(LifeExpectancy) AS EsperanzaVidaMin, GovernmentForm, Region, Name FROM country WHERE GovernmentForm LIKE '%Socialistic%' group by GovernmentForm order by EsperanzaVidaMin  limit 1000; 
+-- SELECT COUNT(Name) AS CantidadPaises, Region FROM Country GROUP BY Region ORDER BY CantidadPaises desc LIMIT 1000;
+
+
 
