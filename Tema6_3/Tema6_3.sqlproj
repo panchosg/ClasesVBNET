@@ -58,7 +58,10 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Consultas SQL.sql" />
+    <Build Include="Consultas MySQL.sql" />
     <Build Include="World20220323.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ConsultasMSSQL.sql" />
   </ItemGroup>
 </Project>
