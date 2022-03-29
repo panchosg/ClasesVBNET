@@ -1,4 +1,4 @@
-﻿USE world;
+﻿-- USE world;
 -- SELECT * FROM country WHERE Name = "Venezuela";
 -- SELECT * FROM country ORDER BY LifeExpectancy;
 -- SELECT * FROM country WHERE code2 LIKE "Ua%";
@@ -31,7 +31,7 @@ VALUES ("Producto4",'aceitePie','loción para las axilas',1234,3);*/
 -- SELECT Min(LifeExpectancy) AS EsperanzaVidaMin, GovernmentForm, Region, Name FROM country WHERE GovernmentForm LIKE '%Socialistic%' group by GovernmentForm order by EsperanzaVidaMin  limit 1000; 
 -- SELECT COUNT(Name) AS CantidadPaises, Region FROM Country GROUP BY Region ORDER BY CantidadPaises desc LIMIT 1000;
 
-USE pruebavb;
+-- USE pruebavb;
 -- SELECT * FROM pruebavb.productos;
 -- DELETE FROM productos WHERE codigo_producto = 6;
 -- DELETE FROM productos WHERE tipo = 'aceitePie';
