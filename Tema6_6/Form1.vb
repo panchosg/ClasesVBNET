@@ -42,4 +42,13 @@ Public Class Form1
         End Try
     End Sub
 
+    Private Sub btnReadRows_Click(sender As Object, e As EventArgs) Handles btnReadRows.Click
+        Try
+
+            lstRows.DataSource = _dbAccess.ReadAllRows()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

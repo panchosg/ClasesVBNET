@@ -32,7 +32,11 @@ Partial Class Form1
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnInsert = New System.Windows.Forms.Button()
         Me.btnContar = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lstRows = New System.Windows.Forms.ListBox()
+        Me.btnReadRows = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -126,11 +130,41 @@ Partial Class Form1
         Me.btnContar.Text = "Contar"
         Me.btnContar.UseVisualStyleBackColor = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.btnReadRows)
+        Me.GroupBox2.Controls.Add(Me.lstRows)
+        Me.GroupBox2.Location = New System.Drawing.Point(320, 100)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(200, 212)
+        Me.GroupBox2.TabIndex = 9
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "GroupBox2"
+        '
+        'lstRows
+        '
+        Me.lstRows.FormattingEnabled = True
+        Me.lstRows.ItemHeight = 15
+        Me.lstRows.Location = New System.Drawing.Point(16, 30)
+        Me.lstRows.Name = "lstRows"
+        Me.lstRows.Size = New System.Drawing.Size(169, 139)
+        Me.lstRows.TabIndex = 0
+        '
+        'btnReadRows
+        '
+        Me.btnReadRows.Location = New System.Drawing.Point(67, 183)
+        Me.btnReadRows.Name = "btnReadRows"
+        Me.btnReadRows.Size = New System.Drawing.Size(75, 23)
+        Me.btnReadRows.TabIndex = 1
+        Me.btnReadRows.Text = "Leer Filas"
+        Me.btnReadRows.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(546, 374)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnContar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
@@ -138,6 +172,7 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -152,4 +187,7 @@ Partial Class Form1
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnInsert As Button
     Friend WithEvents btnContar As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents btnReadRows As Button
+    Friend WithEvents lstRows As ListBox
 End Class

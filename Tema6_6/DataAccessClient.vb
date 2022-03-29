@@ -133,6 +133,45 @@ Public Class DataAccessClient
         Return counted
     End Function
 
+    Public Function ReadAllRows() As List(Of String)
+        Dim rows As List(Of String)
+        Dim oConnection As SqlConnection
+        Dim oCommand As SqlCommand
+        Dim sqlReader As SqlDataReader
+        Dim query As String
+        Dim register As String
+
+        Try
+            rows = New List(Of String)
+            query = "SELECT TOP(1000) * FROM gestores_bd;"
+
+            'Crear objeto conexión
+            oConnection = New SqlConnection()
+            oConnection.ConnectionString = _connectionString
+            'Segunda forma de crear objeto comando
+            oCommand = New SqlCommand(query, oConnection)
+
+            oConnection.Open()
+            'Se realiza el enlace con los registros de la tabla
+            sqlReader = oCommand.ExecuteReader()
+
+            While sqlReader.Read()
+                register = $"id: {sqlReader.GetInt16(0)} nombre: {sqlReader.GetString(1)} lanzamiento:{sqlReader.GetInt16(2)}
+                desarrollador: {sqlReader.GetString(3)}"
+                'register = $"id:{sqlReader.Item("id")}  nombre: {sqlReader.Item("nombre")} lanzamiento:{sqlReader.Item("lanzamiento")} 
+                'desarrollador:{sqlReader.Item("desarrolador")}"
+                rows.Add(register)
+                sqlReader.NextResult()
+            End While
+            sqlReader.Close()
+            oConnection.Close()
+            Return rows
+        Catch ex As SqlException
+            Throw
+        End Try
+
+    End Function
+
 
 
 
