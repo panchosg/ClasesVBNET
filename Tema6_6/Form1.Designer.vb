@@ -31,6 +31,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnInsert = New System.Windows.Forms.Button()
+        Me.btnContar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -116,11 +117,21 @@ Partial Class Form1
         Me.btnInsert.Text = "Insertar"
         Me.btnInsert.UseVisualStyleBackColor = True
         '
+        'btnContar
+        '
+        Me.btnContar.Location = New System.Drawing.Point(134, 25)
+        Me.btnContar.Name = "btnContar"
+        Me.btnContar.Size = New System.Drawing.Size(87, 51)
+        Me.btnContar.TabIndex = 8
+        Me.btnContar.Text = "Contar"
+        Me.btnContar.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(546, 374)
+        Me.Controls.Add(Me.btnContar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
@@ -140,4 +151,5 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnInsert As Button
+    Friend WithEvents btnContar As Button
 End Class

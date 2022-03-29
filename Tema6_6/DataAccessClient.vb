@@ -80,6 +80,7 @@ Public Class DataAccessClient
         Dim rowsAffected As Integer
         Try
             query = "INSERT INTO gestores_bd VALUES(@nombre,@lanzamiento,@desarrollador)"
+
             'Crear objeto conexión
             oConnection = New SqlConnection()
             oConnection.ConnectionString = _connectionString
@@ -88,9 +89,10 @@ Public Class DataAccessClient
             'Agregando parámetros
             oCommand.Parameters.Add(New SqlParameter("@nombre", SqlDbType.NVarChar))
             oCommand.Parameters("@nombre").Value = nombre
-
-
-
+            oCommand.Parameters.Add(New SqlParameter("@lanzamiento", SqlDbType.Int))
+            oCommand.Parameters("@lanzamiento").Value = lanzamiento
+            oCommand.Parameters.Add(New SqlParameter("@desarrollador", SqlDbType.NVarChar))
+            oCommand.Parameters("@desarrollador").Value = desarrollador
 
             oConnection.Open()
             rowsAffected = oCommand.ExecuteNonQuery()
@@ -105,6 +107,33 @@ Public Class DataAccessClient
             Return False
         End If
     End Function
+
+    Public Function CountRows() As Integer
+
+        Dim oConnection As SqlConnection
+        Dim oCommand As SqlCommand
+        Dim query As String
+        Dim counted As Integer
+        Try
+            query = "SELECT COUNT(*) FROM gestores_bd"
+
+            'Crear objeto conexión
+            oConnection = New SqlConnection()
+            oConnection.ConnectionString = _connectionString
+            'Segunda forma de crear objeto comando
+            oCommand = New SqlCommand(query, oConnection)
+
+            oConnection.Open()
+            counted = CInt(oCommand.ExecuteScalar())
+            oConnection.Close()
+
+        Catch ex As SqlException
+
+        End Try
+        Return counted
+    End Function
+
+
 
 
 
