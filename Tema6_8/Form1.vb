@@ -8,5 +8,15 @@
         lstShowRegisters.DataSource = _dbAccess.ReadAllRows()
     End Sub
 
+    Private Sub btnAction_Click(sender As Object, e As EventArgs) Handles btnAction.Click
+        Dim rowsModified As Integer
 
+        If rdbInsert.Checked = True Then
+            rowsModified = _dbAccess.InsertRow(txtName.Text, CInt(txtLaunch.Text), txtDeveloper.Text)
+            If rowsModified > 0 Then
+                MessageBox.Show("Registro insertado")
+            End If
+
+        End If
+    End Sub
 End Class

@@ -27,6 +27,7 @@ Partial Class Form1
         Me.lstShowRegisters = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnAction = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.rdbInsert = New System.Windows.Forms.RadioButton()
         Me.rdbModify = New System.Windows.Forms.RadioButton()
@@ -39,7 +40,6 @@ Partial Class Form1
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -87,7 +87,7 @@ Partial Class Form1
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.btnAction)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.txtDeveloper)
@@ -103,6 +103,15 @@ Partial Class Form1
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Editar registros tabla"
+        '
+        'btnAction
+        '
+        Me.btnAction.Location = New System.Drawing.Point(102, 269)
+        Me.btnAction.Name = "btnAction"
+        Me.btnAction.Size = New System.Drawing.Size(75, 23)
+        Me.btnAction.TabIndex = 9
+        Me.btnAction.Text = "Ejecutar"
+        Me.btnAction.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
@@ -214,15 +223,6 @@ Partial Class Form1
         Me.txtId.Size = New System.Drawing.Size(100, 23)
         Me.txtId.TabIndex = 0
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(102, 269)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Ejecutar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -260,5 +260,5 @@ Partial Class Form1
     Friend WithEvents txtName As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents txtId As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAction As Button
 End Class

@@ -75,11 +75,13 @@ Public Class DataAccessClient
         Return rows
     End Function
 
-    Public Function InsertRow(name As String, launcher As Integer, developer As String) As Boolean
+    Public Function InsertRow(name As String, launcher As Integer, developer As String) As Integer
         Dim oConnection As SqlConnection
         Dim oDataAdapter As SqlDataAdapter
         Dim oDataSet As DataSet
         Dim oDataRow As DataRow
+        Dim oCommandBuild As SqlCommandBuilder
+        Dim rowsModified As Integer
         Dim query As String
 
         query = "SELECT TOP(1000) * FROM gestores_bd;"
@@ -90,6 +92,9 @@ Public Class DataAccessClient
 
             'Crear objeto sqlDataAdapter
             oDataAdapter = New SqlDataAdapter(query, oConnection)
+
+            'Se crea un commando de la clase CommandBuilder que controlará al SqlDataAdapter
+            oCommandBuild = New SqlCommandBuilder(oDataAdapter)
 
             'Crear el objeto dataSet
             oDataSet = New DataSet()
@@ -108,12 +113,43 @@ Public Class DataAccessClient
             'Para añadir la fila a la coleccióin de registros de la tabla se usa add
             oDataSet.Tables("gestores_bd").Rows.Add(oDataRow)
 
-            RefreshDataBase(oDataAdapter, oDataSet, "gestores_bd")
+            rowsModified = RefreshDataBase(oDataAdapter, oDataSet, "gestores_bd")
 
         Catch ex As SqlException
 
         End Try
+        Return rowsModified
     End Function
+
+    Public Function RowModify(idToModify As Integer) As Integer
+        Dim registerList As List(Of String)
+        Dim dataRow As DataRow
+        Dim dataSet As DataSet
+        Dim position As Integer = 0
+
+        Try
+            registerList = New List(Of String)
+            registerList = ReadAllRows()
+
+            'Este for busca la posición del registro en la que se encuentra el id solicitado
+            For Each row In registerList
+                If row.Contains($"id:{idToModify}") Then
+                    'Exit For obliga a salir del For Each aunque no terminé de recorrer la lista
+                    Exit For
+                End If
+                position += 1
+            Next
+
+            'Obtenemos la fila de una determinada posición
+            dataRow = dataSet.Tables("gestores_bd").Rows(position)
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+
+
     ''' <summary>
     ''' Indicar al sistema que realice las modificaciones locales en la base de datos real
     ''' </summary>
