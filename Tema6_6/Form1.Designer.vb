@@ -33,8 +33,8 @@ Partial Class Form1
         Me.btnInsert = New System.Windows.Forms.Button()
         Me.btnContar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.lstRows = New System.Windows.Forms.ListBox()
         Me.btnReadRows = New System.Windows.Forms.Button()
+        Me.lstRows = New System.Windows.Forms.ListBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -110,7 +110,7 @@ Partial Class Form1
         Me.GroupBox1.Size = New System.Drawing.Size(215, 212)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.GroupBox1.Text = "Insertar fila"
         '
         'btnInsert
         '
@@ -134,21 +134,12 @@ Partial Class Form1
         '
         Me.GroupBox2.Controls.Add(Me.btnReadRows)
         Me.GroupBox2.Controls.Add(Me.lstRows)
-        Me.GroupBox2.Location = New System.Drawing.Point(320, 100)
+        Me.GroupBox2.Location = New System.Drawing.Point(25, 345)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(200, 212)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
-        '
-        'lstRows
-        '
-        Me.lstRows.FormattingEnabled = True
-        Me.lstRows.ItemHeight = 15
-        Me.lstRows.Location = New System.Drawing.Point(16, 30)
-        Me.lstRows.Name = "lstRows"
-        Me.lstRows.Size = New System.Drawing.Size(169, 139)
-        Me.lstRows.TabIndex = 0
+        Me.GroupBox2.Text = "Leer todas las filas modo conect"
         '
         'btnReadRows
         '
@@ -159,11 +150,21 @@ Partial Class Form1
         Me.btnReadRows.Text = "Leer Filas"
         Me.btnReadRows.UseVisualStyleBackColor = True
         '
+        'lstRows
+        '
+        Me.lstRows.FormattingEnabled = True
+        Me.lstRows.HorizontalScrollbar = True
+        Me.lstRows.ItemHeight = 15
+        Me.lstRows.Location = New System.Drawing.Point(16, 30)
+        Me.lstRows.Name = "lstRows"
+        Me.lstRows.Size = New System.Drawing.Size(169, 139)
+        Me.lstRows.TabIndex = 0
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(546, 374)
+        Me.ClientSize = New System.Drawing.Size(317, 626)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnContar)
         Me.Controls.Add(Me.GroupBox1)

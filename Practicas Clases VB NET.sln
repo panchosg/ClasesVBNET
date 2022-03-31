@@ -35,7 +35,9 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Tema5_10_instalador", "Tema
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Tema6_3", "Tema6_3\Tema6_3.sqlproj", "{DEDCBFE4-4290-41E8-9BCC-4F8372FFBD21}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Tema6_6", "Tema6_6\Tema6_6.vbproj", "{B540137D-2A56-4186-B4E3-394B8C23B3BF}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Tema6_6", "Tema6_6\Tema6_6.vbproj", "{B540137D-2A56-4186-B4E3-394B8C23B3BF}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Tema6_8", "Tema6_8\Tema6_8.vbproj", "{5435B83C-06E0-4D4D-BEC8-246D470E511F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{B540137D-2A56-4186-B4E3-394B8C23B3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B540137D-2A56-4186-B4E3-394B8C23B3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B540137D-2A56-4186-B4E3-394B8C23B3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5435B83C-06E0-4D4D-BEC8-246D470E511F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5435B83C-06E0-4D4D-BEC8-246D470E511F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5435B83C-06E0-4D4D-BEC8-246D470E511F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5435B83C-06E0-4D4D-BEC8-246D470E511F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

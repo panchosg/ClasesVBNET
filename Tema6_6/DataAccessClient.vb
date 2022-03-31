@@ -155,13 +155,13 @@ Public Class DataAccessClient
             'Se realiza el enlace con los registros de la tabla
             sqlReader = oCommand.ExecuteReader()
 
-            While sqlReader.Read()
-                register = $"id: {sqlReader.GetInt16(0)} nombre: {sqlReader.GetString(1)} lanzamiento:{sqlReader.GetInt16(2)}
-                desarrollador: {sqlReader.GetString(3)}"
-                'register = $"id:{sqlReader.Item("id")}  nombre: {sqlReader.Item("nombre")} lanzamiento:{sqlReader.Item("lanzamiento")} 
-                'desarrollador:{sqlReader.Item("desarrolador")}"
+            While sqlReader.Read() = True
+                'register = $"id: {sqlReader.GetInt32(0)} nombre: {sqlReader.GetString(1)} lanzamiento:{sqlReader.GetInt32(2)}
+                'desarrollador: {sqlReader.GetString(3)}"
+                register = $"id:{sqlReader("id")}  nombre: {sqlReader("nombre")} lanzamiento:{sqlReader("lanzamiento")} 
+                desarrollador:{sqlReader("desarrollador")}"
                 rows.Add(register)
-                sqlReader.NextResult()
+                'sqlReader.NextResult()
             End While
             sqlReader.Close()
             oConnection.Close()
