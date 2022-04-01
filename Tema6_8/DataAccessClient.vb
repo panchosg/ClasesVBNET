@@ -163,6 +163,10 @@ Public Class DataAccessClient
                 position += 1
             Next
 
+            ''Es necesario crear otro comando para acutalizar
+            oDataAdapter.UpdateCommand = New SqlCommand($"UPDATE gestores_bd SET nombre = {gestoresTable.Nombre} " &
+            $"WHERE id = {position}", oConnection)
+
             'Obtenemos la fila de una determinada posición
             dataRow = oDataSet.Tables("gestores_bd").Rows(position)
 
@@ -250,6 +254,7 @@ Public Class DataAccessClient
         Dim rowsModify As Integer
 
         Try
+
             rowsModify = oDataAdapter.Update(oDataSet, nameOfTable)
         Catch ex As Exception
             Throw
