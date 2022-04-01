@@ -29,17 +29,18 @@ Public Class DataAccessClient
     ''' Lectura de tabla en modo desconectado
     ''' </summary>
     ''' <returns></returns>
-    Public Function ReadAllRows() As List(Of String)
-        Dim rows As List(Of String)
+    Public Function ReadAllRows() As List(Of GestoresBD)
+        Dim rows As List(Of GestoresBD)
         Dim oConnection As SqlConnection
         Dim sqlDataAdapter As SqlDataAdapter
         Dim dataSet As DataSet
         Dim dataTable As DataTable
         Dim row As DataRow
+        Dim gestoresBdFields As GestoresBD
         Dim query As String
         Dim register As String
 
-        rows = New List(Of String)
+        rows = New List(Of GestoresBD)
         Try
 
             query = "SELECT TOP(1000) * FROM gestores_bd;"
@@ -62,9 +63,9 @@ Public Class DataAccessClient
             dataTable = dataSet.Tables("gestores_bd")
 
             For Each row In dataTable.Rows
-                register = $"id:{row.Item("id")}  nombre: {row.Item("nombre")} lanzamiento:{row.Item("lanzamiento")} 
-                desarrollador:{row.Item("desarrollador")}"
-                rows.Add(register)
+                gestoresBdFields = New GestoresBD(CInt(row.Item("id")), row.Item("nombre").ToString, CInt(row.Item("lanzamiento")),
+                    row.Item("desarrollador").ToString)
+                rows.Add(gestoresBdFields)
             Next
 
 
@@ -121,19 +122,41 @@ Public Class DataAccessClient
         Return rowsModified
     End Function
 
-    Public Function RowModify(idToModify As Integer) As Integer
-        Dim registerList As List(Of String)
+    Public Function RowModify(gestoresTable As GestoresBD) As Integer
+        Dim oConnection As SqlConnection
+        Dim oDataAdapter As SqlDataAdapter
+        Dim oDataSet As DataSet
+        Dim oCommandBuild As SqlCommandBuilder
+        Dim registerList As List(Of GestoresBD)
         Dim dataRow As DataRow
-        Dim dataSet As DataSet
         Dim position As Integer = 0
+        Dim query As String
 
+        query = "SELECT TOP(1000) * FROM gestores_bd;"
         Try
-            registerList = New List(Of String)
+            'Crear objeto conexión
+            oConnection = New SqlConnection()
+            oConnection.ConnectionString = _connectionString
+
+            'Crear objeto sqlDataAdapter
+            oDataAdapter = New SqlDataAdapter(query, oConnection)
+
+            'Se crea un commando de la clase CommandBuilder que controlará al SqlDataAdapter
+            oCommandBuild = New SqlCommandBuilder(oDataAdapter)
+
+            'Crear el objeto dataSet
+            oDataSet = New DataSet()
+
+            oConnection.Open()
+            oDataAdapter.Fill(oDataSet, "gestores_bd")
+            oConnection.Close()
+
+            registerList = New List(Of GestoresBD)
             registerList = ReadAllRows()
 
             'Este for busca la posición del registro en la que se encuentra el id solicitado
             For Each row In registerList
-                If row.Contains($"id:{idToModify}") Then
+                If row.Id = gestoresTable.Id Then
                     'Exit For obliga a salir del For Each aunque no terminé de recorrer la lista
                     Exit For
                 End If
@@ -141,7 +164,13 @@ Public Class DataAccessClient
             Next
 
             'Obtenemos la fila de una determinada posición
-            dataRow = dataSet.Tables("gestores_bd").Rows(position)
+            dataRow = oDataSet.Tables("gestores_bd").Rows(position)
+
+            dataRow.Item("nombre") = gestoresTable.Nombre
+            dataRow.Item("lanzamiento") = gestoresTable.Lanzamiento
+            dataRow.Item("desarrollador") = gestoresTable.Desarrollador
+
+            RefreshDataBase(oDataAdapter, oDataSet, "gestores_bd")
 
         Catch ex As Exception
 
