@@ -177,6 +177,66 @@ Public Class DataAccessClient
         End Try
     End Function
 
+    Public Function DeletRow(id As Integer) As Boolean
+        Dim oConnection As SqlConnection
+        Dim oDataAdapter As SqlDataAdapter
+        Dim oDataSet As DataSet
+        Dim oCommandBuild As SqlCommandBuilder
+        Dim oDataRow As DataRow
+        Dim registerList As List(Of GestoresBD)
+        Dim oTableDelete As DataTable
+        Dim position As Integer = 0
+        Dim query As String
+
+        query = "SELECT TOP(1000) * FROM gestores_bd;"
+        Try
+            'Crear objeto conexión
+            oConnection = New SqlConnection()
+            oConnection.ConnectionString = _connectionString
+
+            'Crear objeto sqlDataAdapter
+            oDataAdapter = New SqlDataAdapter(query, oConnection)
+
+            'Se crea un commando de la clase CommandBuilder que controlará al SqlDataAdapter
+            oCommandBuild = New SqlCommandBuilder(oDataAdapter)
+
+            'Crear el objeto dataSet
+            oDataSet = New DataSet()
+
+            'Esto abre la conexión
+            oConnection.Open()
+            oDataAdapter.Fill(oDataSet, "gestores_bd")
+            oConnection.Close()
+
+            registerList = New List(Of GestoresBD)
+            registerList = ReadAllRows()
+
+            'Este for busca la posición del registro en la que se encuentra el id solicitado
+            For Each row In registerList
+                If row.Id = id Then
+                    'Exit For obliga a salir del For Each aunque no terminé de recorrer la lista
+                    Exit For
+                End If
+                position += 1
+            Next
+
+            'Enceuntra la fila a borrar
+            oDataRow = oDataSet.Tables("gestores_bd").Rows(position)
+            'Borra la fila pero de la tabla locla, es decir la copia
+            oDataRow.Delete()
+            'Se crea una tabla con los cambios realizados
+            oTableDelete = oDataSet.Tables("gestores_bd").GetChanges(DataRowState.Deleted)
+
+            'Se intenta actualizar la tabla de la BBDD original
+            oDataAdapter.Update(oTableDelete)
+            oDataSet.Tables("gestores_bd").AcceptChanges()
+
+        Catch ex As Exception
+
+        End Try
+        Return True
+    End Function
+
 
 
     ''' <summary>

@@ -10,6 +10,7 @@
 
     Private Sub btnAction_Click(sender As Object, e As EventArgs) Handles btnAction.Click
         Dim rowsModified As Integer
+        Dim isOK As Boolean
         Dim gestoresData As GestoresBD
 
         If rdbInsert.Checked = True Then
@@ -20,12 +21,21 @@
         End If
 
         If rdbModify.Checked = True Then
-                gestoresData = New GestoresBD(CInt(txtId.Text), txtName.Text, CInt(txtLaunch.Text), txtDeveloper.Text)
-                rowsModified = _dbAccess.RowModify(gestoresData)
-                If rowsModified > 0 Then
-                    MessageBox.Show("Registro insertado")
-                End If
-
+            gestoresData = New GestoresBD(CInt(txtId.Text), txtName.Text, CInt(txtLaunch.Text), txtDeveloper.Text)
+            rowsModified = _dbAccess.RowModify(gestoresData)
+            If rowsModified > 0 Then
+                MessageBox.Show("Registro insertado")
             End If
+        End If
+
+        If rdbDelete.Checked = True Then
+            gestoresData = New GestoresBD(CInt(txtId.Text), "", 0, "")
+            isOK = _dbAccess.DeletRow(CInt(gestoresData.Id))
+            If isOK = True Then
+                MessageBox.Show("Registro insertado")
+            End If
+        End If
+
+
     End Sub
 End Class
