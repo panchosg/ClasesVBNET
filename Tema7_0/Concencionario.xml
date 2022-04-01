@@ -1,0 +1,36 @@
+<concesionario>
+    <vehiculo>
+        <marca>Peugeot</marca>
+        <modelo>407</modelo>
+        <matricula>456EU</matricula>
+        <puertas>5</puertas>
+        <foto>https://tucochechulo.com/id=456EU</foto>
+        <color>azúl</color>
+        <tipo>sedan</tipo>
+        <precio>12456</precio>
+        <comentario>Se han vendido como pan caliente</comentario>
+    </vehiculo>
+    <vehiculo>
+        <marca>Renault</marca>
+        <modelo>Megan</modelo>
+        <matricula>445EU</matricula>
+        <puertas>3</puertas>
+        <foto>https://tucochechulo.com/id=445EU</foto>
+        <color>violeta</color>
+        <tipo>Sport</tipo>        
+        <precio>123123123123</precio>
+        <comentario>No hemos vendido ni uno, creemos que es por el color!!!</comentario>
+    </vehiculo>
+    <!-- <vehiculo>
+        <marca>Renault</marca>
+        <modelo>Megan</modelo>
+        <matricula>445EU</matricula>
+        <puertas>3</puertas>
+        <foto>https://tucochechulo.com/id=445EU</foto>
+        <color>violeta</color>
+        <tipo>Sport</tipo>
+        <caracteristicas clase="Sport" color="rojo" puertas="3"></caracteristicas>
+        <precio>123123123123</precio>
+        <comentario>No hemos vendido ni uno, creemos que es por el color!!!</comentario>
+    </vehiculo> -->
+</concesionario>
