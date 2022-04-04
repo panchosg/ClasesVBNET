@@ -1,0 +1,28 @@
+{
+  "concesionario": {
+    "vehiculo": [
+      {
+        "marca": "Peugeot",
+        "modelo": "407",
+        "matricula": "456EU",
+        "puertas": "5",
+        "foto": "https://tucochechulo.com/id=456EU",
+        "color": "azúl",
+        "tipo": "sedan",
+        "precio": "12456",
+        "comentario": "Se han vendido como pan caliente"
+      },
+      {
+        "marca": "Renault",
+        "modelo": "Megan",
+        "matricula": "445EU",
+        "puertas": "3",
+        "foto": "https://tucochechulo.com/id=445EU",
+        "color": "violeta",
+        "tipo": "Sport",
+        "precio": "123123123123",
+        "comentario": "No hemos vendido ni uno, creemos que es por el color!!!"
+      }
+    ]
+  }
+}

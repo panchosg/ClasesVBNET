@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD -->
+<!DOCTYPE sms [
+    <!ELEMENT sms (to,from,texto,asunto+)>
+    <!ELEMENT to (#PCDATA)>
+    <!ELEMENT from (#PCDATA)>
+    <!ELEMENT texto (#PCDATA)>
+    <!ELEMENT asunto (#PCDATA)>
+]>
+<!-- FIN DTD -->
+<sms>
+    <to>Fernando Vera 3232rewrwerf</to>
+    <from>asdfasdfasdfas;ñodsfsd</from>
+    <texto>cxzvzxcvxzk dkfd sfd isdfk dsf  iksdfksd</texto>
+    <asunto></asunto>
+    <asunto></asunto>
+</sms>
