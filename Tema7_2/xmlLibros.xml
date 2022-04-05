@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Libro Genero='Novela' ISBN='1-861001-57-5' Comentario='mal estado'>
+	<Titulo>El oro del Rey</Titulo>
+	<Precio>14.95</Precio>
+</Libro>

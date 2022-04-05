@@ -37,11 +37,13 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Tema6_3", "Tema6_3\Tema6_3.
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Tema6_6", "Tema6_6\Tema6_6.vbproj", "{B540137D-2A56-4186-B4E3-394B8C23B3BF}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Tema6_8", "Tema6_8\Tema6_8.vbproj", "{5435B83C-06E0-4D4D-BEC8-246D470E511F}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Tema6_8", "Tema6_8\Tema6_8.vbproj", "{5435B83C-06E0-4D4D-BEC8-246D470E511F}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "tema6_10", "tema6_10\tema6_10.vbproj", "{D716A6F3-F972-409A-8B09-A6CB113183E6}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "tema6_10", "tema6_10\tema6_10.vbproj", "{D716A6F3-F972-409A-8B09-A6CB113183E6}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Tema7_0", "Tema7_0\Tema7_0.vbproj", "{DDA00E1C-B92E-41E7-A3B4-AA24CFEC1C0B}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Tema7_0", "Tema7_0\Tema7_0.vbproj", "{DDA00E1C-B92E-41E7-A3B4-AA24CFEC1C0B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Tema7_2", "Tema7_2\Tema7_2.vbproj", "{C6148F1D-EDB5-48B8-A065-2FD347649DE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{DDA00E1C-B92E-41E7-A3B4-AA24CFEC1C0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA00E1C-B92E-41E7-A3B4-AA24CFEC1C0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA00E1C-B92E-41E7-A3B4-AA24CFEC1C0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6148F1D-EDB5-48B8-A065-2FD347649DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6148F1D-EDB5-48B8-A065-2FD347649DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6148F1D-EDB5-48B8-A065-2FD347649DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6148F1D-EDB5-48B8-A065-2FD347649DE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

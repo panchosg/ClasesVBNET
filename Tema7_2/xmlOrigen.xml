@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu_almuerzo>
+	<comida id="1">
+		<precio>10.5</precio>
+		<descripcion>Ensalada con pollo y piña</descripcion>
+		<ingredientes>
+			<ingrediente>Verdura</ingrediente>
+			<ingrediente>Carne</ingrediente>
+			<ingrediente>Fruta</ingrediente>
+		</ingredientes>
+		<calorias>650</calorias>
+	</comida>
+	<comida id="2">
+		<precio>20.5</precio>
+		<descripcion>Pato a la naranja</descripcion>
+		<ingredientes>
+			<ingrediente>Pato</ingrediente>
+			<ingrediente>Naranja</ingrediente>
+			<ingrediente>Salsa</ingrediente>
+		</ingredientes>
+		<calorias>700</calorias>
+	</comida>	
+</menu_almuerzo>
