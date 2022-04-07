@@ -23,6 +23,7 @@ Module Program
         doc.LoadXml("<Libro Genero='Novela' " & "ISBN='1-861001-57-5' " &
                     "Comentario='mal estado'>" & "<Titulo>El oro del Rey</Titulo>" &
                     "<Precio>14.95</Precio>" & "</Libro>")
+
         raiz = doc.DocumentElement
         raizAtributos = raiz.Attributes
         For posicion = 0 To raizAtributos.Count - 1
@@ -34,6 +35,12 @@ Module Program
             atributo = raizAtributos("ISBN")
             Console.WriteLine("El valor del atributo ISBN es " & atributo.Value)
         End If
+
+
+
+
+
+
 
 
 
